@@ -1,22 +1,29 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: node_app
   labels:
-    app: myapp
+    app: node_app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: myapp
+      app: node_app
   template:
     metadata:
       labels:
-        app: myapp
+        app: node_app
     spec:
       containers:
-        - name: myapp
-          image: 491085392874.dkr.ecr.us-east-1.amazonaws.com/app/nodejs:latest1.1 # Double-check this image tag
-          ports:
-            - containerPort: 3004
+      - name: node_app
+        image: 491085392874.dkr.ecr.us-east-1.amazonaws.com/app/nodejs:latest1.1
+        ports:
+        - containerPort: 3004
+        resources:
+          requests:
+            memory: "500Mi"
+            cpu: "500m"
+          limits:
+            memory: "500Mi"
+            cpu: "500m"
 
