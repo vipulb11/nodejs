@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: myapp
-        image: 491085392874.dkr.ecr.us-east-1.amazonaws.com/app/nodejs:latest1.1
-        ports:
-        - containerPort: 3004
+          image: 491085392874.dkr.ecr.us-east-1.amazonaws.com/app/nodejs:latest1.1 # Double-check this image tag
+          ports:
+            - containerPort: 3004
 
