@@ -18,5 +18,5 @@ spec:
       - name: node_app
         image: 491085392874.dkr.ecr.us-east-1.amazonaws.com/app/nodejs:latest1.1
         ports:
-        - containerPort: 80
+        - containerPort: 3004
 
